@@ -200,10 +200,13 @@
   justify-content: flex-start;
 }
 .hero-visual { display: flex; justify-content: center; }
-.hero-visual svg {
+.hero-visual img {
   width: 100%;
-  max-width: 480px;
+  max-width: 560px;
   height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
   filter: drop-shadow(0 12px 24px rgba(30, 58, 138, 0.15));
 }
 @media (max-width: 768px) {
@@ -213,7 +216,7 @@
   .hero-content p.lead { text-align: center; margin: 0 auto var(--space-6); }
   .hero-content .hero-ctas { justify-content: center; }
   .hero-visual { order: -1; }
-  .hero-visual svg { max-width: 360px; }
+  .hero-visual img { max-width: 100%; }
 }
 
 /* Brand logo in header (SVG inline) */
@@ -341,7 +344,12 @@
   overflow: hidden;
   position: relative;
 }
-.gallery-item svg { width: 100%; height: 100%; display: block; }
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
 .gallery-item .caption {
   position: absolute;
   bottom: 0;
