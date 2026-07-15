@@ -169,7 +169,6 @@
   position: relative;
   background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
   padding: var(--space-16) 0 var(--space-12);
-  text-align: center;
   overflow: hidden;
 }
 .hero::before {
@@ -182,14 +181,39 @@
   pointer-events: none;
 }
 .hero > .container { position: relative; z-index: 1; }
-.hero h1 { line-height: 1.1; max-width: 720px; margin: 0 auto var(--space-4); }
-.hero p.lead { max-width: 640px; margin: 0 auto var(--space-6); font-size: var(--fs-lg); }
-.hero .hero-ctas {
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+  text-align: left;
+}
+.hero-content { text-align: left; }
+.hero-content h1 { line-height: 1.1; max-width: 600px; margin: 0 0 var(--space-4); text-align: left; }
+.hero-content p.lead { max-width: 560px; margin: 0 0 var(--space-6); font-size: var(--fs-lg); text-align: left; }
+.hero-content .google-rating { margin: var(--space-4) 0; }
+.hero-content .hero-ctas {
   display: flex;
   gap: var(--space-4);
-  justify-content: center;
   flex-wrap: wrap;
   margin-top: var(--space-6);
+  justify-content: flex-start;
+}
+.hero-visual { display: flex; justify-content: center; }
+.hero-visual svg {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  filter: drop-shadow(0 12px 24px rgba(30, 58, 138, 0.15));
+}
+@media (max-width: 768px) {
+  .hero-grid { grid-template-columns: 1fr; text-align: center; gap: var(--space-8); }
+  .hero-content { text-align: center; }
+  .hero-content h1 { text-align: center; }
+  .hero-content p.lead { text-align: center; margin: 0 auto var(--space-6); }
+  .hero-content .hero-ctas { justify-content: center; }
+  .hero-visual { order: -1; }
+  .hero-visual svg { max-width: 360px; }
 }
 
 /* Brand logo in header (SVG inline) */
