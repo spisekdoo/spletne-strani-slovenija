@@ -165,7 +165,25 @@
 }
 
 /* Hero enhancements */
-.hero h1 { line-height: 1.1; }
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
+  padding: var(--space-16) 0 var(--space-12);
+  text-align: center;
+  overflow: hidden;
+}
+.hero::before {
+  /* Decorative background pattern (SVG dots) */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(37, 99, 235, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+.hero > .container { position: relative; z-index: 1; }
+.hero h1 { line-height: 1.1; max-width: 720px; margin: 0 auto var(--space-4); }
+.hero p.lead { max-width: 640px; margin: 0 auto var(--space-6); font-size: var(--fs-lg); }
 .hero .hero-ctas {
   display: flex;
   gap: var(--space-4);
@@ -174,26 +192,68 @@
   margin-top: var(--space-6);
 }
 
+/* Brand logo in header (SVG inline) */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 700;
+  font-size: var(--fs-lg);
+  text-decoration: none;
+  color: var(--c-text);
+}
+.brand .logo {
+  width: 32px;
+  height: 32px;
+  background: var(--c-accent);
+  color: white;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
 /* Trust bar (just below hero) */
 .trust-bar {
   background: var(--c-text);
   color: white;
-  padding: var(--space-6) 0;
-  text-align: center;
+  padding: var(--space-8) 0;
 }
 .trust-bar .container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--space-6);
 }
-.trust-item { font-size: var(--fs-lg); font-weight: 600; }
+.trust-item {
+  text-align: center;
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+.trust-item .trust-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--c-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
 .trust-item small {
   display: block;
   font-size: 14px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
   margin-top: 4px;
+}
+@media (max-width: 768px) {
+  .trust-bar .container { grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
 }
 
 /* Google rating widget */
@@ -213,19 +273,34 @@
 /* Service cards — icon + desc + cta */
 .service-card {
   text-align: left;
+  position: relative;
+  transition: transform 200ms, box-shadow 200ms;
+}
+.service-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
 }
 .service-card .service-icon {
   width: 48px;
   height: 48px;
+  background: var(--c-accent);
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
   margin-bottom: var(--space-3);
-  font-size: 18px;
 }
 .service-card .price-hint {
-  display: block;
+  display: inline-block;
   margin-top: var(--space-3);
+  padding: 4px 10px;
+  background: rgba(37, 99, 235, 0.1);
   color: var(--c-accent);
+  border-radius: 999px;
   font-weight: 600;
-  font-size: var(--fs-sm);
+  font-size: 13px;
 }
 
 /* Gallery */
