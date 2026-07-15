@@ -457,6 +457,33 @@
 /* Stari gallery (backup, če slider ne dela) */
 .gallery { display: none; }
 
+/* Fallback za slike, ki se niso naložile */
+.slide img.img-failed,
+.hero-visual img.img-failed,
+.story-visual img.img-failed {
+  background: linear-gradient(135deg, var(--c-accent-soft), var(--c-bg-soft));
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.slide img.img-failed::after,
+.hero-visual img.img-failed::after,
+.story-visual img.img-failed::after {
+  content: "Slika se ni naložila — osvežite stran (Ctrl+Shift+R)";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-6);
+  color: var(--c-text-soft);
+  font-size: var(--fs-sm);
+  font-family: var(--font-mono);
+}
+
 /* ============================================================
    PRICING (popravek #7: 3 stolpci, ne 1)
    ============================================================ */

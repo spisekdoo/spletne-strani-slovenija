@@ -7,8 +7,30 @@
   window.addEventListener('error', (e) => {
     if (e.target && e.target.tagName === 'IMG') {
       console.error('[slider] IMG failed to load:', e.target.src);
+      // Add a CSS class so the page can show fallback if needed
+      e.target.classList.add('img-failed');
     }
   }, true);
+
+  // Force image load with retry
+  function forceLoad(img) {
+    if (!img || img.dataset.loaded) return;
+    const src = img.getAttribute('data-real-src') || img.src;
+    if (!src) return;
+    const test = new Image();
+    test.onload = () => { img.dataset.loaded = '1'; };
+    test.onerror = () => {
+      console.warn('[slider] retry failed for', src);
+      // Try once more after 1s
+      setTimeout(() => {
+        const retry = new Image();
+        retry.onload = () => { img.src = src + '?retry=' + Date.now(); img.dataset.loaded = '1'; };
+        retry.onerror = () => { img.classList.add('img-failed'); };
+        retry.src = src + '?retry=' + Date.now();
+      }, 1000);
+    };
+    test.src = src;
+  }
 
   function initSlider(root) {
     const track = root.querySelector('.slider-track');
