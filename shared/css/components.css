@@ -202,8 +202,8 @@
 .hero-visual { display: flex; justify-content: center; }
 .hero-visual img {
   width: 100%;
-  max-width: 560px;
   height: auto;
+  max-width: 560px;
   border-radius: 16px;
   object-fit: cover;
   aspect-ratio: 16 / 9;
@@ -345,10 +345,13 @@
   position: relative;
 }
 .gallery-item img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
+  object-position: center;
 }
 .gallery-item .caption {
   position: absolute;
@@ -360,6 +363,7 @@
   padding: var(--space-4);
   font-size: 14px;
   font-weight: 500;
+  z-index: 1;
 }
 @media (max-width: 768px) {
   .gallery { grid-template-columns: repeat(2, 1fr); }
