@@ -110,7 +110,7 @@
 .contact-item { display: flex; align-items: center; gap: var(--space-3); }
 .contact-item svg { width: 24px; height: 24px; color: var(--c-accent); flex-shrink: 0; }
 
-/* Footer */
+/* Site footer */
 .site-footer {
   background: var(--c-text);
   color: white;
@@ -118,3 +118,30 @@
   text-align: center;
 }
 .site-footer a { color: #93c5fd; }
+
+/* Mobile menu (hamburger) */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: var(--space-2);
+    line-height: 1;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--c-bg);
+    flex-direction: column;
+    padding: var(--space-4) var(--space-6);
+    border-top: 1px solid var(--c-border);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+  .nav-links.open { display: flex; }
+  .site-header .container { position: relative; }
+}

@@ -1,9 +1,13 @@
 // functions/_middleware.js
-// Cloudflare Pages Function: token-based access (alternative to standalone Worker)
-// Place this in the Pages project's functions/ directory — it runs on every request.
+// Cloudflare Pages Function: token-based access to client sites
 //
-// This is the RECOMMENDED approach for Cloudflare Pages (simpler than wrangler deploy).
-// The standalone worker/src/ is kept for reference / future flexibility.
+// URL format: https://spletne-strani-slovenija.pages.dev/?t=<token>
+//
+// 1. Health check (/_health) bypasses token check
+// 2. Static assets (.css/.js/.png/.svg/etc) pass through
+// 3. Token (16 hex chars) validated against Cloudflare KV (binding: TOKENS)
+// 4. Valid token rewrites / to /sites/<slug>/
+// 5. Invalid/missing token returns 404 (no info leak)
 
 export async function onRequest(context) {
   const { request, env, next } = context;
@@ -61,6 +65,5 @@ export async function onRequest(context) {
   url.searchParams.delete('t');
   url.pathname = `/sites/${slug}/`;
 
-  // Pass through with rewritten URL
   return next(new Request(url, request));
 }
