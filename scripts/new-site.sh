@@ -43,6 +43,8 @@ sed -i \
   -e "s|info@avtomehanika-kd\.si|info@$SLUG.si|g" \
   -e "s|+386 5 123 4567|+386 5 000 0000|g" \
   -e "s|051 234 567|051 000 000|g" \
+  -e "s|../../shared/|/shared/|g" \
+  -e "s|../assets/|/sites/$SLUG/assets/|g" \
   "$SITE_DIR/index.html"
 
 # Generate a fresh token for this site
