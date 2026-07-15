@@ -1,5 +1,15 @@
 // slider.js — minimal vanilla JS slider (avtomatsko drsi, kontrole, dots, dotik)
 (function() {
+  // Debug logging (visible in browser console)
+  function log(...args) { console.log('[slider]', ...args); }
+
+  // Global image error tracking
+  window.addEventListener('error', (e) => {
+    if (e.target && e.target.tagName === 'IMG') {
+      console.error('[slider] IMG failed to load:', e.target.src);
+    }
+  }, true);
+
   function initSlider(root) {
     const track = root.querySelector('.slider-track');
     if (!track) return;
@@ -28,6 +38,25 @@
       });
     }
 
+    // Force-load all images (lazy in flex slider never triggers)
+    function ensureImage(i) {
+      const img = slides[i] && slides[i].querySelector('img');
+      if (!img) return;
+      // If image src missing but data-src present, swap
+      if (!img.src || img.src === window.location.href) {
+        const dataSrc = img.getAttribute('data-src');
+        if (dataSrc) {
+          img.src = dataSrc;
+          img.removeAttribute('data-src');
+        }
+      }
+    }
+    function preloadAround(i) {
+      ensureImage(i);
+      ensureImage((i + 1) % slides.length);
+      ensureImage((i - 1 + slides.length) % slides.length);
+    }
+
     function update() {
       track.style.transform = 'translateX(-' + (index * 100) + '%)';
       if (dotsContainer) {
@@ -35,6 +64,7 @@
           d.classList.toggle('active', i === index);
         });
       }
+      preloadAround(index);
     }
     function goTo(i) {
       index = (i + slides.length) % slides.length;
@@ -89,6 +119,8 @@
       if (document.hidden) stopAutoplay(); else startAutoplay();
     });
 
+    // Initial state
+    log('init', slides.length, 'slides, autoplay', autoplayMs + 'ms');
     update();
     startAutoplay();
   }
