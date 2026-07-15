@@ -38,3 +38,4 @@ sites/_local/
 
 # Ne pushaj strankinih assetov v produkciji
 sites/*/assets/_draft/
+.test-imgs/
