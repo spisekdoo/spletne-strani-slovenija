@@ -145,3 +145,274 @@
   .nav-links.open { display: flex; }
   .site-header .container { position: relative; }
 }
+
+/* --- Enhancements for richer demo --- */
+
+/* Badges (inline pill labels) */
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--c-accent);
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+}
+.badge-gold {
+  background: rgba(234, 179, 8, 0.15);
+  color: #b45309;
+}
+
+/* Hero enhancements */
+.hero h1 { line-height: 1.1; }
+.hero .hero-ctas {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--space-6);
+}
+
+/* Trust bar (just below hero) */
+.trust-bar {
+  background: var(--c-text);
+  color: white;
+  padding: var(--space-6) 0;
+  text-align: center;
+}
+.trust-bar .container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+}
+.trust-item { font-size: var(--fs-lg); font-weight: 600; }
+.trust-item small {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 4px;
+}
+
+/* Google rating widget */
+.google-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: white;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: var(--space-3) var(--space-4);
+  margin: var(--space-4) 0;
+}
+.google-rating .stars { color: #fbbf24; font-size: 18px; }
+.google-rating strong { font-size: var(--fs-lg); }
+
+/* Service cards — icon + desc + cta */
+.service-card {
+  text-align: left;
+}
+.service-card .service-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: var(--space-3);
+  font-size: 18px;
+}
+.service-card .price-hint {
+  display: block;
+  margin-top: var(--space-3);
+  color: var(--c-accent);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+.gallery-item {
+  aspect-ratio: 4 / 3;
+  background: var(--c-bg-soft);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+}
+.gallery-item svg { width: 100%; height: 100%; display: block; }
+.gallery-item .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  color: white;
+  padding: var(--space-4);
+  font-size: 14px;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Stats row */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+  text-align: center;
+  margin: var(--space-8) 0;
+}
+.stat-number {
+  display: block;
+  font-size: var(--fs-4xl);
+  font-weight: 700;
+  color: var(--c-accent);
+  line-height: 1;
+}
+.stat-label {
+  display: block;
+  font-size: var(--fs-sm);
+  color: var(--c-text-soft);
+  margin-top: var(--space-2);
+}
+@media (max-width: 768px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Pricing tiers */
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.pricing-card {
+  background: var(--c-bg);
+  border: 2px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: var(--space-8) var(--space-6);
+  text-align: center;
+  position: relative;
+}
+.pricing-card.featured {
+  border-color: var(--c-accent);
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
+}
+.pricing-card .tier-name {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+.pricing-card .tier-price {
+  font-size: var(--fs-3xl);
+  font-weight: 700;
+  color: var(--c-accent);
+  margin: var(--space-3) 0;
+}
+.pricing-card .tier-price small {
+  font-size: var(--fs-sm);
+  color: var(--c-text-soft);
+  font-weight: 400;
+}
+.pricing-card ul {
+  list-style: none;
+  margin: var(--space-4) 0;
+  padding: 0;
+}
+.pricing-card li {
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--c-border);
+  color: var(--c-text-soft);
+  font-size: var(--fs-sm);
+}
+.pricing-card li:last-child { border-bottom: 0; }
+.pricing-card li::before { content: "✓ "; color: var(--c-accent); font-weight: 600; }
+.pricing-card .popular {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--c-accent);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .pricing { grid-template-columns: 1fr; }
+  .pricing-card.featured { transform: none; }
+}
+
+/* FAQ accordion */
+.faq {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.faq details {
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  margin-bottom: var(--space-3);
+  background: var(--c-bg);
+}
+.faq summary {
+  padding: var(--space-4) var(--space-6);
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq summary::after { content: "+"; font-size: 24px; color: var(--c-accent); }
+.faq details[open] summary::after { content: "−"; }
+.faq details p {
+  padding: 0 var(--space-6) var(--space-4);
+  color: var(--c-text-soft);
+}
+
+/* Map embed */
+.map-embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: var(--radius);
+}
+
+/* CTA block */
+.cta-block {
+  background: var(--c-accent);
+  color: white;
+  padding: var(--space-12) var(--space-6);
+  border-radius: var(--radius);
+  text-align: center;
+}
+.cta-block h2 { color: white; }
+.cta-block .cta-buttons {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  margin-top: var(--space-6);
+  flex-wrap: wrap;
+}
+.cta-block .btn {
+  background: white;
+  color: var(--c-accent-dark);
+}
+.cta-block .btn:hover { background: #f3f4f6; }
+.cta-block .btn-ghost {
+  background: transparent;
+  color: white;
+  border-color: white;
+}
+.cta-block .btn-ghost:hover {
+  background: white;
+  color: var(--c-accent-dark);
+}

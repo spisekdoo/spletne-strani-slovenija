@@ -3,15 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Avtomehanika Kd | Avtoservis in vulkanizerstvo v Kopru</title>
-  <meta name="description" content="Avtomehanika Kd v Kopru — 20+ let izkušenj z avtoservisom, vulkanizerstvom in hitrimi popravili. Poštena cena, hitra storitev, brez presenečenj.">
+  <title>Avtomehanika Kd Koper | Avtoservis, vulkanizerstvo, diagnostika</title>
+  <meta name="description" content="Avtomehanika Kd v Kopru — 20+ let izkušenj z avtoservisom, vulkanizerstvom, diagnostiko in hitrimi popravili. Google ★ 4.8 (47 mnenj). Poštena cena, hitra storitev.">
   <meta name="theme-color" content="#2563eb">
+
+  <!-- Open Graph (za deljenje na FB/WhatsApp) -->
+  <meta property="og:title" content="Avtomehanika Kd Koper | Avtoservis in vulkanizerstvo">
+  <meta property="og:description" content="20+ let, Google ★ 4.8, poštena cena, hitra storitev. Pokličite 051 234 567.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sl_SI">
+
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232563eb'/%3E%3Ctext x='50' y='65' font-size='60' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EA%3C/text%3E%3C/svg%3E">
 
   <!-- Skupni CSS (iz shared/) — absolutne poti ker Pages ne dovoljuje ".." v URL -->
   <link rel="stylesheet" href="/shared/css/reset.css">
   <link rel="stylesheet" href="/shared/css/typography.css">
   <link rel="stylesheet" href="/shared/css/components.css">
+
+  <!-- LocalBusiness schema (Google bogati zadetki) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "Avtomehanika Kd",
+    "image": "/shared/img/og-default.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Industrijska cesta 5",
+      "addressLocality": "Koper",
+      "postalCode": "6000",
+      "addressCountry": "SI"
+    },
+    "telephone": "+386-51-234-567",
+    "email": "info@avtomehanika-kd.si",
+    "url": "https://avtomehanika-kd.si",
+    "openingHoursSpecification": [
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"17:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"12:00"}
+    ],
+    "priceRange": "€€",
+    "aggregateRating": {"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"47"}
+  }
+  </script>
 </head>
 <body>
 
@@ -22,6 +55,8 @@
         <button class="menu-toggle" aria-label="Odpri meni" aria-expanded="false">☰</button>
         <ul class="nav-links">
           <li><a href="#storitve">Storitve</a></li>
+          <li><a href="#galerija">Galerija</a></li>
+          <li><a href="#cene">Cenik</a></li>
           <li><a href="#o-nas">O nas</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
         </ul>
@@ -31,45 +66,234 @@
 
   <section class="hero">
     <div class="container">
-      <h1>Avtoservis in vulkanizerstvo v Kopru</h1>
-      <p class="lead">20+ let izkušenj, poštena cena, hitra storitev. Brez presenečenj — prej vam povemo, kaj in koliko.</p>
-      <a href="tel:+38651234567" class="btn">Pokličite: 051 234 567</a>
+      <span class="badge">✓ 20+ let izkušenj v Kopru</span>
+      <h1>Avtoservis in vulkanizerstvo,<br>ki mu zaupate</h1>
+      <p class="lead">Poštena cena, hitra storitev, brez presenečenj. Vsako popravilo vam vnaprej razložimo in potrdimo ceno — preden se lotimo dela.</p>
+      <div class="google-rating">
+        <span class="stars">★★★★★</span>
+        <strong>4.8</strong>
+        <span style="color:var(--c-text-soft)">(47 mnenj na Google)</span>
+      </div>
+      <div class="hero-ctas">
+        <a href="tel:+38651234567" class="btn">📞 Pokličite: 051 234 567</a>
+        <a href="#kontakt" class="btn btn-ghost">Pošljite povpraševanje</a>
+      </div>
     </div>
   </section>
 
+  <div class="trust-bar">
+    <div class="container">
+      <div class="trust-item">20+ let<small>izkušenj</small></div>
+      <div class="trust-item">5.000+<small>zadovoljnih strank</small></div>
+      <div class="trust-item">4.8 ★<small>Google ocena</small></div>
+      <div class="trust-item">12 mesecev<small>garancije na delo</small></div>
+    </div>
+  </div>
+
   <section class="section" id="storitve">
     <div class="container">
-      <h2>Storitve</h2>
+      <h2>Kaj vam ponujamo</h2>
       <div class="grid grid-3">
-        <div class="card">
+        <div class="card service-card">
+          <div class="service-icon">🔧</div>
           <h3>Avtoservis</h3>
-          <p>Redni servisi, menjava olja, filtri, zavorni sistemi. Za vse znamke.</p>
+          <p>Redni servisi, menjava olja in filtrov, zavore, vzmetenje, izpušni sistemi. Za vse znamke — od osebnih do dostavnih vozil.</p>
+          <span class="price-hint">od 65 € naprej</span>
         </div>
-        <div class="card">
+        <div class="card service-card">
+          <div class="service-icon">⚙️</div>
           <h3>Vulkanizerstvo</h3>
-          <p>Menjava pnevmatik, centriranje, shranjevanje. Poletne in zimske.</p>
+          <p>Menjava pnevmatik, centriranje, shranjevanje (brezplačno), popravilo predrtih pnevmatik. Poletne in zimske.</p>
+          <span class="price-hint">menjava od 35 €</span>
         </div>
-        <div class="card">
-          <h3>Diagnostika</h3>
-          <p>Računalniška diagnostika motorja, ABS, airbag. Brezplačno ob rednem servisu.</p>
+        <div class="card service-card">
+          <div class="service-icon">💻</div>
+          <h3>Računalniška diagnostika</h3>
+          <p>Diagnostika motorja, ABS, airbag, klimatske naprave. Brezplačna ob rednem servisu, sicer 25 €.</p>
+          <span class="price-hint">brezplačno ob servisu</span>
+        </div>
+        <div class="card service-card">
+          <div class="service-icon">🛞</div>
+          <h3>Menjava gum in centriranje</h3>
+          <p>Hitra menjava v 30 minutah, 3D centriranje, uravnoteženje. Možnost hrambe pnevmatik do naslednje sezone.</p>
+          <span class="price-hint">celotna menjava 35 €</span>
+        </div>
+        <div class="card service-card">
+          <div class="service-icon">🚗</div>
+          <h3>Hitri popravila</h3>
+          <p>Manjša popravila med čakanjem — akumulator, žarometi, brisalci, klima, filter zraka. Večina v manj kot 1 uri.</p>
+          <span class="price-hint">po pregledu</span>
+        </div>
+        <div class="card service-card">
+          <div class="service-icon">📋</div>
+          <h3>Tehnični pregled</h3>
+          <p>Priprava na tehnični pregled, ureditev manjših pomanjkljivosti, spremstvo na AMZS. Po dogovoru.</p>
+          <span class="price-hint">po dogovoru</span>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section bg-soft" id="galerija">
+    <div class="container">
+      <h2>Naša delavnica</h2>
+      <p style="text-align:center;max-width:640px;margin:0 auto var(--space-8);color:var(--c-text-soft)">
+        Sodobno opremljena delavnica v industrijski coni Koper, 250 m² delovne površine, 4 delovna mesta.
+      </p>
+      <div class="gallery">
+        <div class="gallery-item">
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="300" fill="#e0e7ff"/>
+            <g transform="translate(50,80)">
+              <rect x="0" y="20" width="300" height="100" rx="8" fill="#1e40af"/>
+              <circle cx="60" cy="140" r="20" fill="#1e3a8a"/>
+              <circle cx="240" cy="140" r="20" fill="#1e3a8a"/>
+              <rect x="100" y="0" width="100" height="40" rx="4" fill="#3b82f6" opacity="0.5"/>
+            </g>
+            <text x="200" y="280" text-anchor="middle" fill="#475569" font-size="14" font-weight="600">Dvigalo za osebna vozila</text>
+          </svg>
+          <div class="caption">2 sodobni dvigali</div>
+        </div>
+        <div class="gallery-item">
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="300" fill="#fef3c7"/>
+            <g transform="translate(100,70)">
+              <circle cx="100" cy="80" r="70" fill="#1e3a8a"/>
+              <circle cx="100" cy="80" r="50" fill="#3b82f6"/>
+              <circle cx="100" cy="80" r="20" fill="#fbbf24"/>
+            </g>
+            <text x="200" y="280" text-anchor="middle" fill="#475569" font-size="14" font-weight="600">Centriranje</text>
+          </svg>
+          <div class="caption">3D centriranje</div>
+        </div>
+        <div class="gallery-item">
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="300" fill="#d1fae5"/>
+            <g transform="translate(50,60)">
+              <rect x="20" y="20" width="120" height="80" rx="8" fill="#059669"/>
+              <rect x="40" y="40" width="80" height="40" fill="#10b981"/>
+              <rect x="200" y="50" width="80" height="60" rx="4" fill="#374151"/>
+              <rect x="220" y="70" width="40" height="20" fill="#10b981"/>
+            </g>
+            <text x="200" y="280" text-anchor="middle" fill="#475569" font-size="14" font-weight="600">Diagnostika</text>
+          </svg>
+          <div class="caption">Diagnostična oprema</div>
+        </div>
+        <div class="gallery-item">
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="300" fill="#fce7f3"/>
+            <g transform="translate(50,60)">
+              <circle cx="80" cy="100" r="60" fill="#1e3a8a"/>
+              <circle cx="80" cy="100" r="35" fill="#3b82f6"/>
+              <circle cx="220" cy="100" r="60" fill="#1e3a8a"/>
+              <circle cx="220" cy="100" r="35" fill="#3b82f6"/>
+            </g>
+            <text x="200" y="280" text-anchor="middle" fill="#475569" font-size="14" font-weight="600">Pnevmatike</text>
+          </svg>
+          <div class="caption">Skladišče pnevmatik</div>
+        </div>
+        <div class="gallery-item">
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="300" fill="#e0e7ff"/>
+            <g transform="translate(120,80)">
+              <rect x="0" y="0" width="160" height="120" rx="6" fill="#1e3a8a"/>
+              <rect x="20" y="20" width="120" height="80" fill="#3b82f6"/>
+              <rect x="40" y="40" width="80" height="20" fill="#fbbf24"/>
+            </g>
+            <text x="200" y="280" text-anchor="middle" fill="#475569" font-size="14" font-weight="600">Čakalnica</text>
+          </svg>
+          <div class="caption">Udobna čakalnica</div>
+        </div>
+        <div class="gallery-item">
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="300" fill="#fed7aa"/>
+            <g transform="translate(100,70)">
+              <rect x="0" y="0" width="200" height="100" rx="6" fill="#92400e"/>
+              <rect x="20" y="20" width="160" height="60" fill="#fbbf24"/>
+              <rect x="40" y="40" width="120" height="20" fill="#fff"/>
+            </g>
+            <text x="200" y="280" text-anchor="middle" fill="#475569" font-size="14" font-weight="600">Pisarna</text>
+          </svg>
+          <div class="caption">Sprejem in blagajna</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="cene">
+    <div class="container">
+      <h2>Cenovni pregled</h2>
+      <p style="text-align:center;max-width:640px;margin:0 auto var(--space-8);color:var(--c-text-soft)">
+        Cene so informativne — končna cena odvisna od vozila in obsega. Vsako popravilo vam vnaprej potrdimo.
+      </p>
+      <div class="pricing">
+        <div class="pricing-card">
+          <div class="tier-name">Servis Start</div>
+          <div class="tier-price">65 €<small>/servis</small></div>
+          <ul>
+            <li>Menjava olja in filtra</li>
+            <li>Pregled zavor</li>
+            <li>Kontrola tekočin</li>
+            <li>Brezplačna diagnostika</li>
+            <li>30 min</li>
+          </ul>
+        </div>
+        <div class="pricing-card featured">
+          <span class="popular">Najbolj priljubljeno</span>
+          <div class="tier-name">Servis Plus</div>
+          <div class="tier-price">125 €<small>/servis</small></div>
+          <ul>
+            <li>Vse iz Servis Start</li>
+            <li>Menjava zavornih ploščic</li>
+            <li>Menjava zračnega filtra</li>
+            <li>Centriranje po potrebi</li>
+            <li>90 min</li>
+          </ul>
+        </div>
+        <div class="pricing-card">
+          <div class="tier-name">Veliki servis</div>
+          <div class="tier-price">od 245 €<small>/servis</small></div>
+          <ul>
+            <li>Vse iz Servis Plus</li>
+            <li>Menjava svečk, jermena</li>
+            <li>Čiščenje injektorjev</li>
+            <li>Popoln pregled vozila</li>
+            <li>2–3 ure</li>
+          </ul>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:var(--space-6);color:var(--c-text-soft);font-size:14px">
+        Vulkanizerstvo: menjava 4 gum 35 € · centriranje 25 € · shranjevanje brezplačno do naslednje sezone.
+      </p>
     </div>
   </section>
 
   <section class="section bg-soft" id="o-nas">
     <div class="container">
       <h2>O nas</h2>
-      <p class="lead" style="text-align:center;max-width:640px;margin:0 auto;">
-        Smo družinska delavnica z 20+ let izkušenj. Naš moto: <em>poštena cena, kvalitetno delo, brez presenečenj.</em>
-        Vsako popravilo vam vnaprej razložimo in potrdimo ceno.
-      </p>
+      <div style="max-width:720px;margin:0 auto">
+        <p class="lead" style="text-align:center">
+          Smo družinska delavnica z <strong>20+ let izkušenj</strong> v Kopru. Začeli smo kot enomehančarska delavnica
+          leta 2003, danes pa ekipa 4 mehanikov in 1 vulkanizer skrbi za več kot <strong>5.000 zadovoljnih strank</strong>
+          iz cele Obale.
+        </p>
+        <div class="stats">
+          <div><span class="stat-number">20+</span><span class="stat-label">let izkušenj</span></div>
+          <div><span class="stat-number">5.000+</span><span class="stat-label">strank</span></div>
+          <div><span class="stat-number">4.8★</span><span class="stat-label">Google ocena</span></div>
+          <div><span class="stat-number">12</span><span class="stat-label">mesecev garancije</span></div>
+        </div>
+        <p style="text-align:center;color:var(--c-text-soft);margin-top:var(--space-6)">
+          Naš moto: <em>poštena cena, kvalitetno delo, brez presenečenj.</em> Vsako popravilo vam vnaprej razložimo
+          in potrdimo ceno. Če med delom najdemo dodatne težave, vas pokličemo preden nadaljujemo.
+        </p>
+      </div>
     </div>
   </section>
 
   <section class="section" id="kontakt">
     <div class="container">
-      <h2>Kontakt in lokacija</h2>
+      <h2>Kje smo in kdaj</h2>
       <div class="grid grid-2">
         <div class="card">
           <h3>Kontaktni podatki</h3>
@@ -86,6 +310,10 @@
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5z"/></svg>
               <span>Industrijska cesta 5, 6000 Koper</span>
             </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+              <a href="https://www.google.com/maps/search/?api=1&query=Industrijska+cesta+5+Koper" target="_blank" rel="noopener">Odpri v Google Maps →</a>
+            </div>
           </div>
         </div>
         <div class="card">
@@ -93,8 +321,63 @@
           <div class="services">
             <div class="service-item"><div class="service-icon">P</div><div><strong>Ponedeljek – Petek</strong><br>08:00 – 17:00</div></div>
             <div class="service-item"><div class="service-icon">S</div><div><strong>Sobota</strong><br>08:00 – 12:00</div></div>
-            <div class="service-item"><div class="service-icon">N</div><div><strong>Nedelja</strong><br>Zaprto</div></div>
+            <div class="service-item"><div class="service-icon">N</div><div><strong>Nedelja in prazniki</strong><br>Zaprto</div></div>
           </div>
+        </div>
+      </div>
+      <div style="margin-top:var(--space-8)">
+        <iframe
+          class="map-embed"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=13.70%2C45.53%2C13.74%2C45.55&layer=mapnik&marker=45.540%2C13.720"
+          title="Lokacija Avtomehanika Kd na zemljevidu"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-soft">
+    <div class="container">
+      <h2>Pogosta vprašanja</h2>
+      <div class="faq">
+        <details>
+          <summary>Kako dolgo traja običajen servis?</summary>
+          <p>Manjši servis (olje, filtri): 30–45 minut. Večji servis s pregledom: 2–3 ure. Vulkanizerstvo (menjava 4 gum): 30–45 minut. Natančneje vam povemo po diagnostiki.</p>
+        </details>
+        <details>
+          <summary>Ali delate na vseh znamkah?</summary>
+          <p>Da. Imamo izkušnje z vsemi evropskimi, japonskimi in korejskimi znamkami. Za novejše modele z digitalnimi ključi uporabljamo originalno diagnostično opremo pooblaščenih servisov.</p>
+        </details>
+        <details>
+          <summary>Kakšna je cena diagnostike?</summary>
+          <p>Brezplačna je, če nadaljujete s servisom pri nas. Če samo želite diagnostiko (oceno stanja), stane 25 € — to pa vam vračunamo, če se odločite za popravilo.</p>
+        </details>
+        <details>
+          <summary>Ali nudite brezplačno shranjevanje pnevmatik?</summary>
+          <p>Da — za naše stranke shranjevanje pnevmatik med sezonami je brezplačno. Pnevmatike hranimo v suhem, temnem prostoru z ustrezno temperaturo.</p>
+        </details>
+        <details>
+          <summary>Kakšen je vaš delovni čas in ali sprejemate nujne primere?</summary>
+          <p>Delovni čas: ponedeljek–petek 8–17, sobota 8–12. Za nujne primere (poškodba na cesti) nas pokličite in bomo poskušali pomagati izven delovnega časa.</p>
+        </details>
+        <details>
+          <summary>Ali nudite garancijo na opravljeno delo?</summary>
+          <p>Da — 12 mesecev na opravljeno delo, skladno z veljavno zakonodajo. Uporabljamo kakovostne nadomestne dele, original ali primerljive kakovosti.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-block">
+        <h2>Potrebujete servis ali vulkanizerstvo?</h2>
+        <p style="color:rgba(255,255,255,0.95);max-width:560px;margin:0 auto">
+          Pokličite, pišite ali pridite v delavnico. Nudimo brezplačno oceno in vam vnaprej povemo ceno.
+        </p>
+        <div class="cta-buttons">
+          <a href="tel:+38651234567" class="btn">📞 051 234 567</a>
+          <a href="mailto:info@avtomehanika-kd.si" class="btn btn-ghost">✉ info@avtomehanika-kd.si</a>
         </div>
       </div>
     </div>
@@ -102,7 +385,10 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>© 2026 Avtomehanika Kd · Spletno stran pripravil <a href="https://spisek.si">Spisek</a></p>
+      <p><strong>Avtomehanika Kd</strong> · Industrijska cesta 5, 6000 Koper · 051 234 567</p>
+      <p style="margin-top:var(--space-2);font-size:14px;opacity:0.7">
+        © 2026 Avtomehanika Kd · Spletno stran pripravil <a href="https://spisek.si">Spisek</a>
+      </p>
     </div>
   </footer>
 
