@@ -1,0 +1,40 @@
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Editor
+.idea/
+.vscode/
+*.iml
+
+# Node (za wrangler / wrangler.toml ci)
+node_modules/
+.npm
+*.log
+
+# Wrangler/Cloudflare local state
+.wrangler/
+.mf/
+dist/
+.dev.vars
+
+# Python (za AJPES scraper)
+__pycache__/
+*.pyc
+.pytest_cache/
+venv/
+.venv/
+
+# Generated
+*.bak
+*.tmp
+
+# Sezname lead-ov in config (lokalni development)
+sites/_local/
+.env
+.env.local
+
+# Ne pushaj strankinih assetov v produkciji
+sites/*/assets/_draft/

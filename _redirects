@@ -1,0 +1,9 @@
+# _redirects — Cloudflare Pages redirects
+# Format: SOURCE TARGET STATUS
+#
+# Default: serve the example site when visiting root with token
+# (handled by functions/_middleware.js, this is just a fallback)
+# /  /sites/_example/?t=7782c57e22f3993c  302
+
+# Force HTTPS
+http://spletne-strani-slovenija.pages.dev/*  https://spletne-strani-slovenija.pages.dev/:splat  301

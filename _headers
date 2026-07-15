@@ -1,0 +1,13 @@
+# _headers — Cloudflare Pages security headers
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+# Long cache for static assets
+/shared/*
+  Cache-Control: public, max-age=31536000, immutable
+/sites/*/assets/*
+  Cache-Control: public, max-age=31536000, immutable

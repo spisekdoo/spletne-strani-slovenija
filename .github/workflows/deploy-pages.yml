@@ -1,0 +1,29 @@
+# .github/workflows/deploy-pages.yml
+# Auto-deploy Cloudflare Pages from main branch
+#
+# Required secrets (Settings → Secrets and variables → Actions):
+#   CLOUDFLARE_API_TOKEN: wrangler-compatible API token
+#   CLOUDFLARE_ACCOUNT_ID: your Cloudflare account ID
+
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: spletne-strani-slovenija
+          directory: .
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}

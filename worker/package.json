@@ -1,0 +1,18 @@
+{
+  "name": "spletne-strani-slovenija-token-gate",
+  "version": "0.1.0",
+  "description": "Cloudflare Worker for token-based site access",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "kv:create": "wrangler kv:namespace create TOKENS",
+    "kv:list": "wrangler kv:namespace list",
+    "token:put": "wrangler kv:key put --binding=TOKENS",
+    "token:list": "wrangler kv:key list --binding=TOKENS"
+  },
+  "devDependencies": {
+    "wrangler": "^3.50.0"
+  }
+}

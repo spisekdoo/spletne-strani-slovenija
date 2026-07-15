@@ -1,0 +1,59 @@
+/* typography.css — slovenščini prijazna tipografija */
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-display: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --fs-base: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 2rem;
+  --fs-3xl: 2.75rem;
+  --fs-4xl: 3.5rem;
+  --lh-tight: 1.2;
+  --lh-normal: 1.6;
+  --c-text: #1a1a1a;
+  --c-text-soft: #4a4a4a;
+  --c-bg: #ffffff;
+  --c-accent: #2563eb;
+  --c-accent-dark: #1d4ed8;
+  --c-border: #e5e7eb;
+  --c-bg-soft: #f9fafb;
+  --radius: 8px;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --maxw: 1100px;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  color: var(--c-text);
+  background: var(--c-bg);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  line-height: var(--lh-tight);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+h1 { font-size: var(--fs-4xl); margin-bottom: var(--space-4); }
+h2 { font-size: var(--fs-3xl); margin-bottom: var(--space-4); }
+h3 { font-size: var(--fs-2xl); margin-bottom: var(--space-3); }
+h4 { font-size: var(--fs-xl); margin-bottom: var(--space-2); }
+
+p { margin-bottom: var(--space-4); }
+p.lead { font-size: var(--fs-lg); color: var(--c-text-soft); }
+
+a { color: var(--c-accent); transition: color 150ms; }
+a:hover { color: var(--c-accent-dark); }
+
+@media (max-width: 768px) {
+  :root { --fs-3xl: 2rem; --fs-4xl: 2.5rem; }
+}
