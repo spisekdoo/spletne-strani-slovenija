@@ -871,22 +871,41 @@
 .story-content p:last-child { margin-bottom: 0; }
 .story-quote {
   font-family: var(--font-display);
-  font-size: var(--fs-xl);
-  line-height: 1.4;
+  font-size: var(--fs-lg);
+  line-height: 1.6;
   color: var(--c-text);
-  padding: var(--space-6) 0 var(--space-6) var(--space-6);
-  border-left: 3px solid var(--c-accent);
-  margin-top: var(--space-8);
-  font-style: italic;
+  padding: var(--space-5) 0 var(--space-5) var(--space-5);
+  border-left: 2px solid var(--c-accent);
+  margin-top: var(--space-6);
+  font-style: normal;
+  font-weight: 400;
+  quotes: """ """;
+}
+.story-quote::before {
+  content: open-quote;
+  font-size: 1.3em;
+  color: var(--c-accent);
+  margin-right: 2px;
+  line-height: 0;
+  vertical-align: -0.15em;
+}
+.story-quote::after {
+  content: close-quote;
+  font-size: 1.3em;
+  color: var(--c-accent);
+  margin-left: 2px;
+  line-height: 0;
+  vertical-align: -0.15em;
 }
 .story-quote-author {
   display: block;
-  margin-top: var(--space-4);
+  margin-top: var(--space-3);
   font-family: var(--font-body);
   font-size: var(--fs-sm);
   font-style: normal;
   color: var(--c-text-soft);
   letter-spacing: 0;
+  font-weight: 500;
 }
 .story-visual img {
   width: 100%;
