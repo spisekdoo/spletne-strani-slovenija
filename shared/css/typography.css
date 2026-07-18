@@ -136,9 +136,9 @@ strong, b { font-weight: 600; color: var(--c-text); }
 
 em, i { font-style: italic; }
 
-/* Mono (caption, badges, Google rating) */
-.mono, .badge, .google-rating, .stat-number, .pricing-card .tier-price {
-  font-family: var(--font-mono);
+/* Mono (caption, badges, Google rating) - poenoteno na body font (Inter) */
+.mono, .badge, .google-rating {
+  font-family: var(--font-body);
   font-feature-settings: "tnum", "zero";
 }
 
