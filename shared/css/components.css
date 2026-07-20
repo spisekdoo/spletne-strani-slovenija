@@ -1034,6 +1034,34 @@
 }
 .site-footer strong { color: white; font-weight: 600; }
 
+/* Google link v footerju: inline-flex, ikona in tekst vertikalno poravnana */
+.footer-google-link {
+  margin-top: var(--space-3);
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-google-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #dbeafe;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: background 150ms, color 150ms;
+}
+.footer-google-link a:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+}
+.footer-google-link svg {
+  flex-shrink: 0;
+  display: block;
+}
+
 /* ============================================================
    MOBILE MENU (hamburger)
    ============================================================ */
